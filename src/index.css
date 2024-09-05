@@ -139,12 +139,12 @@ table {
     border-spacing: 0;
     width: 100%;
     display: table;
-    border: 1px solid #ccc;
+    border: 1px solid #8b8787;
 
 }
 
 td, th {
-  border: 1px solid #dddddd;
+  border: 1px solid #8b8787;
   text-align: left;
   padding: 8px;
 }
