@@ -19,7 +19,6 @@ const Detail = () => {
   }, []);
 
   return (
-    <>
       <div className="detail">
         {loading ? (
           <img src="https://cdn-icons-png.flaticon.com/512/6356/6356612.png"/>
@@ -42,7 +41,6 @@ const Detail = () => {
           </>
         )}
       </div>
-    </>
   );
 };
 

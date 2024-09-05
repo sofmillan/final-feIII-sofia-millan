@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {useDentistState} from '../Context/Context'
+import { useDentistState } from '../Context/Context'
 
 const Form = () => {
 

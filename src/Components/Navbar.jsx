@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import { useDentistState } from '../Context/Context';
 
 const Navbar = () => {
-  const { state, toggleTheme } = useDentistState();
+  const { state, changeTheme } = useDentistState();
   return (
     <nav className={state.theme === "light" ? "nav-light":"nav-dark"}>
       
@@ -22,11 +22,11 @@ const Navbar = () => {
         <h4>Contact</h4>
       </Link>
     
-      <button onClick={toggleTheme} className={state.theme === "light" ? "button-light":"button-dark"}>
+      <button onClick={changeTheme} className={state.theme === "light" ? "button-light":"button-dark"}>
         Switch to {state.theme === "light" ? "dark" : "light"} mode
       </button>
     </nav>
   )
 }
 
-export default Navbar
+export default Navbar;

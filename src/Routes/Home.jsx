@@ -1,5 +1,5 @@
 import Card from '../Components/Card'
-import {useDentistState} from '../Context/Context'
+import { useDentistState } from '../Context/Context'
 
 const Home = () => {
 
