@@ -1,13 +1,13 @@
 import React from "react";
 import { useState } from "react";
-
+import {useDentistState} from '../Context/Context'
 const Form = () => {
   //Aqui deberan implementar el form completo con sus validaciones
   const [user, setUser] = useState({
     name:"",
     email:""
   });
-
+  const { state, toggleTheme } = useDentistState();
   const [successMessage, setSuccessMessage] = useState(false);
   const [errorMessage, setErrorMessage] = useState(false);
 
@@ -53,7 +53,7 @@ const Form = () => {
     </div>
 
  
-    <button type="submit">Submit</button>
+    <button className={state.theme === "light" ? "button-light":"button-dark"} type="submit">Submit</button>
   </form> }
 
 

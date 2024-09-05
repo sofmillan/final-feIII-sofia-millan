@@ -6,10 +6,12 @@ import Home from "./Routes/Home";
 import Favs from "./Routes/Favs";
 import Detail from "./Routes/Detail";
 import Contact from "./Routes/Contact";
+import { useDentistState } from './Context/Context';
 
 function App() {
+  const { state, toggleTheme } = useDentistState();
   return (
-      <div className="App">
+      <div className={state.theme === "light" ? "app-light":"app-dark"}>
           <Navbar/>
           <Routes>
           <Route path="/" element={<Home/>} />

@@ -11,12 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.favButton{
-  background-color: rgba(136, 136, 136, 0.116);
+button{
   padding: 10px;
   border: none;
-  width: 100%;
   cursor: pointer;
+  display: block;
+}
+
+.button-light{
+  background-color:rgb(107, 107, 107);
+}
+
+.button-dark{
+  background-color:rgb(107, 107, 107);
 }
 
 h1{
@@ -25,9 +32,16 @@ h1{
 
 nav{
   display: flex;
-  width: 80vw;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   padding: 1rem;
+}
+
+.nav-light{
+  color: black;
+}
+
+.nav-dark{
+  color:white;
 }
 
 a{
@@ -69,6 +83,13 @@ form{
   height: 100px;
   margin: 0 auto;
 }
+form input{
+  padding: 8px;
+  height: 14px;
+  width: 200px;
+  border:none;
+  border-radius: 8px;
+}
 
 .card{
   display: flex;
@@ -77,7 +98,17 @@ form{
   align-items: center;
   width: 200px;
   padding: 0.5rem 0.5rem 0 0.5rem;
-  border: 0.5px solid rgb(136, 136, 136);
+  border-radius: 8px;
+}
+
+.card-light{
+  border: 0.5px solid #B3B3B3;
+  background-color: rgb(231, 231, 231);
+}
+
+.card-dark{
+  color: white;
+  background-color: #535353;
 }
 
 .card:hover{
@@ -118,5 +149,24 @@ tr:nth-child(even) {
   color: white;
 }
 .dark > a {
+  color: white;
+}
+
+.app-light{
+  background-color: white;
+}
+.app-dark{
+  background-color: #212121;
+}
+
+.contact{
+  text-align: center;
+}
+
+.contact-light{
+  color: black;
+}
+
+.contact-dark{
   color: white;
 }

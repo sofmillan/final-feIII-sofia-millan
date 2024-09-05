@@ -18,13 +18,16 @@ import axios from 'axios';
 		return { ...state, dentists: action.payload };
 	  case "ADD_FAVS":
 		return { ...state, favs: [...state.favs, action.payload] };
-	  default:
+	  case "TOGGLE_THEME":
+		return { ...state, theme: state.theme === "light" ? "dark" : "light" };	 
+	  default:	
 		throw new Error();
 	}
   };
   const initialState = {
 	dentists: [],
 	favs: [],
+	theme: "light"
   };
 const Context = ({children}) => {
  
@@ -39,8 +42,13 @@ const Context = ({children}) => {
 		dispatch({ type: "GET_DENTISTS", payload: res.data });
 	})
   },[])
+
+  const toggleTheme = () => {
+    dispatch({ type: "TOGGLE_THEME" });
+  };
+
   return (
-    <DentistState.Provider value={{ state, dispatch }}>
+    <DentistState.Provider value={{ state, dispatch, toggleTheme }}>
       {children}
     </DentistState.Provider>
   );
