@@ -19,7 +19,7 @@ const Detail = () => {
   }, []);
   return (
     <>
-      <div>
+      <div className="detail">
         {loading ? (
           "Hagamos de cuenta que soy un spinner..."
         ) : (

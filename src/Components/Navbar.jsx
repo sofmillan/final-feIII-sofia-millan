@@ -23,7 +23,7 @@ const Navbar = () => {
         <h4>Contact</h4>
       </Link>
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
-      <button onClick={toggleTheme}>
+      <button onClick={toggleTheme} className={state.theme === "light" ? "button-light":"button-dark"}>
         Switch to {state.theme === "light" ? "dark" : "light"} mode
       </button>
     </nav>

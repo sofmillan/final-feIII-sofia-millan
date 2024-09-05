@@ -18,6 +18,16 @@ button{
   display: block;
   border-radius: 1rem;
 }
+.app-light{
+  background-color: white;
+  color: black;
+  height:100%;
+}
+.app-dark{
+  background-color: #212121;
+  color:white;
+  min-height:100vh;
+}
 
 .button-light{
   background-color:rgb(181, 181, 181);
@@ -36,18 +46,19 @@ nav{
   display: flex;
   justify-content: space-evenly;
   padding: 1rem;
+  color:blue;
 }
 
-.nav-light{
-  color: black;
+.nav-light h4{
+  color: rgb(87, 87, 87);
 }
 
-.nav-dark{
+.nav-dark h4{
   color:white;
 }
 
 a{
-  color: #000;
+  color: #5b5b5b;
   text-decoration: none;
   margin: 5px;
   cursor: pointer;
@@ -62,22 +73,17 @@ img{
 footer {
   display: flex;
   justify-content: center;
+  align-items: center;
   text-align: center;
   padding: 2rem;
   position: relative;
   bottom: 0;
-  width: 90%;
-  height: 40px;
   margin-top: 2rem;
 }
 
 footer > img{
   width: 200px;
-  margin: 0;
-}
-footer > p{
-  margin: 0;
-  padding-top: 0.7rem;
+  margin-left: 1rem;
 }
 
 form{
@@ -115,7 +121,7 @@ form input{
 }
 
 .card:hover{
-  border: 0.5px solid rgb(206, 217, 142);
+  border: 0.2px solid rgb(188, 188, 188);
 }
 
 .card-grid{
@@ -143,27 +149,13 @@ td, th {
   padding: 8px;
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-
-.dark{
-  background-color: #12121296;
-  color: white;
-}
-.dark > a {
-  color: white;
-}
-
-.app-light{
-  background-color: white;
-  color: black;
-}
-.app-dark{
-  background-color: #212121;
-  color:white;
-}
 
 .contact{
   text-align: center;
 }
+
+.detail{
+  text-align: center;
+  height: 100%;
+}
+
