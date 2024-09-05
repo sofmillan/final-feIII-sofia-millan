@@ -35,10 +35,11 @@ const Card = ({dentist }) => {
 
         {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
         <Link to={"/detail/"+id}>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd3qTuLA-swxAHRr-0k7CY-WfbGzVTcLnfzA&s" width="50"/>
+        <button className={state.theme === "light" ? "button-light":"button-dark"}>See detail</button>
         </Link>
         {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
-        <button onClick={addFav} className="favButton">Add fav</button>
+
+        <img onClick={addFav} src="https://i.pinimg.com/originals/fd/e6/e0/fde6e0fc44801d9c14ef90095d52b9de.png" width="35"/>
     </div>
   );
 };
