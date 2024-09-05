@@ -136,7 +136,9 @@ form input{
   flex-wrap: wrap;
   margin: 0 auto;
 }
-
+.card .profile-picture{
+  width:100px;
+}
 table {
  border-collapse: collapse;
     border-spacing: 0;
@@ -166,6 +168,3 @@ td, th {
   width:150px;
 }
 
-.card .profile-picture{
-  width:100px;
-}
