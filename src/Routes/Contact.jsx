@@ -1,5 +1,4 @@
 import Form from '../Components/Form'
-import {useDentistState} from '../Context/Context'
 
 const Contact = () => {
   return (
@@ -11,4 +10,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Contact;

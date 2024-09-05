@@ -1,21 +1,15 @@
-import React from 'react'
 import Card from '../Components/Card'
-import { useState, useEffect } from 'react';
-import axios from 'axios';
 import {useDentistState} from '../Context/Context'
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Home = () => {
 
   const {state} = useDentistState();
 
-
   return (
-    <main className="" >
+    <main>
       <h1>Home</h1>
       <div className='card-grid'>
-        {/* Aqui deberias renderizar las cards */}
-        {state.dentists.map(d => <Card key={d.id} dentist={d}/>)}
+        {state.dentists.map(dentist => <Card key={dentist.id} dentist={dentist}/>)}
       </div>
     </main>
   )

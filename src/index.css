@@ -162,3 +162,6 @@ td, th {
   height: 100%;
 }
 
+.detail img{
+  width:150px;
+}

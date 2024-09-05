@@ -2,10 +2,12 @@ import { useState } from "react";
 import {useDentistState} from '../Context/Context'
 
 const Form = () => {
+
   const [user, setUser] = useState({
     name:"",
     email:""
   });
+
   const { state } = useDentistState();
   const [successMessage, setSuccessMessage] = useState(false);
   const [errorMessage, setErrorMessage] = useState(false);
@@ -53,7 +55,6 @@ const Form = () => {
  
     <button className={state.theme === "light" ? "button-light":"button-dark"} type="submit">Submit</button>
   </form> }
-
 
   {errorMessage && <h2 style={{color:'maroon'}}>Please verify your info</h2>}
 
