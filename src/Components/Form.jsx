@@ -40,7 +40,7 @@ const Form = () => {
   return (
 	<>
 
-  {successMessage ? <h2>Thanks {user.name}, we will conatct you soon</h2> :  
+  {successMessage ? <h2>Thanks {user.name}, we will contact you soon</h2> :  
    <form onSubmit={handleSubmit} >
     <div>
       <label>Full Name</label>
