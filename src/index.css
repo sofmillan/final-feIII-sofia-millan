@@ -111,6 +111,9 @@ form input{
   border-radius: 8px;
 }
 
+.card .favImg{
+  width:35px;
+}
 .card-light{
   background-color: rgb(210, 210, 210);
 }

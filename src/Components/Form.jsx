@@ -1,13 +1,12 @@
-import React from "react";
 import { useState } from "react";
 import {useDentistState} from '../Context/Context'
+
 const Form = () => {
-  //Aqui deberan implementar el form completo con sus validaciones
   const [user, setUser] = useState({
     name:"",
     email:""
   });
-  const { state, toggleTheme } = useDentistState();
+  const { state } = useDentistState();
   const [successMessage, setSuccessMessage] = useState(false);
   const [errorMessage, setErrorMessage] = useState(false);
 
@@ -27,7 +26,6 @@ const Form = () => {
  
     if(user.name.trim().length>=5
       && emailRegex.test(user.email)){
-
       setSuccessMessage(true);
       setErrorMessage(false);
 

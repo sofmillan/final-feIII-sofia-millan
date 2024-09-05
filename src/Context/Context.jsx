@@ -16,8 +16,6 @@ import axios from 'axios';
 	switch (action.type) {
 	  case "GET_DENTISTS":
 		return { ...state, dentists: action.payload };
-	  case "ADD_FAVS":
-		return { ...state, favs: [...state.favs, action.payload] };
 	  case "TOGGLE_THEME":
 		return { ...state, theme: state.theme === "light" ? "dark" : "light" };	 
 	  default:	
@@ -26,7 +24,6 @@ import axios from 'axios';
   };
   const initialState = {
 	dentists: [],
-	favs: [],
 	theme: "light"
   };
 const Context = ({children}) => {

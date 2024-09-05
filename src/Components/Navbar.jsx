@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom"
 import { useDentistState } from '../Context/Context';
-//Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Navbar = () => {
   const { state, toggleTheme } = useDentistState();
@@ -22,7 +21,7 @@ const Navbar = () => {
       <Link to="/contact">
         <h4>Contact</h4>
       </Link>
-      {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
+    
       <button onClick={toggleTheme} className={state.theme === "light" ? "button-light":"button-dark"}>
         Switch to {state.theme === "light" ? "dark" : "light"} mode
       </button>
