@@ -25,7 +25,7 @@ const Card = ({ dentist }) => {
   return (
     <div className= {state.theme === "light" ? " card card-light":" card card-dark"}>
 
-          <img src="https://preview.redd.it/ive-only-seen-season-1-of-pok%C3%A9mon-and-jigglypuff-is-to-me-v0-09u2n2roivob1.png?auto=webp&s=1e5260b0a47027fac3ba1ab5f37bc8cf8f27853b" width="200"/>
+          <img className="profile-picture" src="https://cdn-icons-png.flaticon.com/512/10337/10337525.png" />
           
           <p>{id}</p>
           <p>{name}</p>
