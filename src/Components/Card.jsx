@@ -1,10 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Card = ({ name, username, id }) => {
-
+const Card = ({dentist }) => {
+  const {name, username, id} = dentist;
   const addFav = ()=>{
     // Aqui iria la logica para agregar la Card en el localStorage
+
+    let existingArray = JSON.parse(localStorage.getItem("favs")) || [];
+
+
+    let dentist1 = existingArray.find(d =>d.id ===id);
+    console.log(dentist1);
+    if(dentist1){
+      alert("This dentist was already added")
+    }else{
+      existingArray.push(dentist);
+      alert("Your dentist has been added to favs")
+    }
+ 
+    localStorage.setItem("favs", JSON.stringify(existingArray));
   }
 
   return (
@@ -16,7 +30,7 @@ const Card = ({ name, username, id }) => {
           <p>{username}</p>
 
         {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
-        <Link to="/detail/">
+        <Link to={"/detail/"+id}>
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTd3qTuLA-swxAHRr-0k7CY-WfbGzVTcLnfzA&s" width="50"/>
         </Link>
         {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
