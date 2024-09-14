@@ -29,7 +29,7 @@ const Detail = () => {
             <thead>
               <tr>
                 <th>Name</th>
-                <th>Username</th>
+                <th>Website</th>
                 <th>Email</th>
                 <th>Phone</th>
               </tr>
@@ -37,7 +37,7 @@ const Detail = () => {
             <tbody>
               <tr>
                 <td>{dentist.name}</td>
-                <td>{dentist.username}</td>
+                <td>{dentist.website}</td>
                 <td>{dentist.email}</td>
                 <td>{dentist.phone}</td>
               </tr>
