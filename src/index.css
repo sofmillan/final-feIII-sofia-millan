@@ -46,7 +46,6 @@ nav{
   display: flex;
   justify-content: space-evenly;
   padding: 1rem;
-  color:blue;
 }
 
 .nav-light h4{
@@ -109,6 +108,7 @@ form input{
   width: 200px;
   padding: 0.5rem;
   border-radius: 8px;
+  text-align: center;
 }
 
 .card .favImg{
@@ -119,8 +119,14 @@ form input{
 }
 
 .card-dark{
-  color: white;
   background-color: #535353;
+}
+
+.card-light p{
+  color: black;
+}
+.card-dark p{
+  color: white;
 }
 
 .card:hover{

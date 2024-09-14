@@ -2,7 +2,12 @@ import { Link } from "react-router-dom"
 import { useDentistState } from '../Context/Context';
 
 const Navbar = () => {
-  const { state, changeTheme } = useDentistState();
+  const { state, dispatch } = useDentistState();
+
+  const changeTheme = ()=>{
+    dispatch({ type: "CHANGE_THEME" });
+  }
+  
   return (
     <nav className={state.theme === "light" ? "nav-light":"nav-dark"}>
       

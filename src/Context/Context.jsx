@@ -1,21 +1,14 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
+import { reducer } from "../reducers/reducer";
 import axios from "axios";
 
 const DentistState = createContext();
 
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "GET_DENTISTS":
-      return { ...state, dentists: action.payload };
-    case "CHANGE_THEME":
-      return { ...state, theme: state.theme === "light" ? "dark" : "light" };
-    default:
-      throw new Error();
-  }
-};
+const favDentists = JSON.parse(localStorage.getItem("favs")) || [];
 
 const initialState = {
   dentists: [],
+  favs: favDentists,
   theme: "light",
 };
 
@@ -30,12 +23,12 @@ const Context = ({ children }) => {
     });
   }, []);
 
-  const changeTheme = () => {
-    dispatch({ type: "CHANGE_THEME" });
-  };
+  useEffect(() => {
+    localStorage.setItem("favs", JSON.stringify(state.favs));
+  }, [state.favs]);
 
   return (
-    <DentistState.Provider value={{ state, dispatch, changeTheme }}>
+    <DentistState.Provider value={{ state, dispatch }}>
       {children}
     </DentistState.Provider>
   );
